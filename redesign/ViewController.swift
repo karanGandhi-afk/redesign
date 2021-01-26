@@ -9,11 +9,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    @IBOutlet weak var labell: UILabel!
+    @IBOutlet weak var changingImage: UIImageView!
+
+    var listOfImages = [#imageLiteral(resourceName: "Eq_it-na_pizza-margherita_sep2005_sml"), #imageLiteral(resourceName: "pizza")]
+    
+    @IBAction func Click(_ sender: Any) {
+        
+        let storeRandom = Int.random(in: 0...1)
+        
+        changingImage.image = listOfImages[storeRandom]
+
     }
-
-
+    
 }
 
